@@ -1,0 +1,261 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.clear{
+	clear: both;
+}
+
+.logo-oldbikes{
+	height: 100px;
+	width: 120px;
+}
+
+header{
+	background-color: #fffb00;
+}
+
+
+.button-login{
+	margin-right: 10px;
+}
+
+.search{
+	margin-left: 6px;
+	margin-bottom: 2px;
+}
+
+header li{
+	padding: 0 15px;
+}
+
+.banner-bike{
+	max-width: 100%;
+	padding:50px 0 100px 0;
+	min-height: 800px;
+	background-image: url('../imagens/sobre-bike.png');
+	background-size: cover;
+	background-size: 100% 100%;
+}
+
+.great-vibes {
+	font-family: 'Great Vibes', cursive;
+	font-size: 80px;
+}
+
+.great-vibes-40 {
+	font-family: 'Great Vibes', cursive;
+	font-size: 60px;
+}
+
+.w60{
+	max-width: 60%;
+}
+
+.botao-banner{
+	width: 80%;
+	margin : 0 auto;
+}
+
+.banner-bike h1{
+	margin-top: 60px;
+	font-size: 55px;
+}
+
+.destaque-semanal{
+	padding-bottom: 20px;
+}
+
+.card {
+	margin: 6px;
+	background-color: #eeeeee;
+	height: 450px;
+}
+
+section.destaque-semanal .container{
+	max-width: 1400px;
+}
+
+.sidebar{
+	float: left;
+	width: 30%;
+}
+
+.search1{
+	width:90%;
+}
+
+.search1 h2{
+	font-size: 24px;
+	color: black;
+	font-weight: normal;
+}
+
+.search1 .barra-preco{
+	width: 100%;
+	height: 20px;
+	background: white;
+	border:1px solid #ccc;
+	margin-top:8px;
+	border-radius: 20px;
+	position: relative;
+}
+
+.barra-preco-fill{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 30%;
+	height: 20px;
+	border-radius: 20px;
+	background:linear-gradient(to bottom,rgb(255,255,255),rgb(200,200,200));
+}
+
+.pointer-barra{
+	width: 26px;
+	height: 26px;
+	position: absolute;
+	left: calc(30% - 13px);
+	top: -3px;
+	cursor: pointer;
+	border-radius: 8px;
+	background:linear-gradient(to bottom,rgb(255,255,255),rgb(180,180,180));
+	border:1px solid  #777;
+}
+
+.valor-pesquisa{
+	margin-top:8px;
+}
+
+.valor-pesquisa p{
+	color: black;
+	font-size: 15px;
+}
+
+.valor-pesquisa p:nth-of-type(1){
+	float: left;
+}
+
+.valor-pesquisa p:nth-of-type(2){
+	float: right;
+}
+
+.search2{
+	margin-top:40px;
+}
+
+.search2 h2{
+	font-size: 24px;
+	color: black;
+	font-weight: normal;
+}
+
+.form-venda-wraper{
+	margin-top:10px;
+}
+
+.form-venda-wraper input[type=checkbox]{
+	display: none;
+}
+
+.form-venda-wraper label{
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	border:1px solid #ccc;
+	border-radius: 3px;
+	vertical-align: top;
+	cursor: pointer;
+	position: relative;
+}
+
+
+.circle{
+	width: 8px;
+	height: 8px;
+	display: none;
+	border-radius: 4px;
+	background: black;
+	position: absolute;
+	left: 6px;
+	top: 6px;
+}
+
+.titulo-venda{
+	margin:50px;
+}
+
+.form-venda-wraper input[type=checkbox]:checked + label > .circle{
+	display: block;
+}
+
+.form-venda-wraper span{
+	padding:0 10px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.filtros{
+	width: 30%;
+}
+
+
+section.banner-sobre{
+	width: 100%;
+	background-color: rgb(187, 187, 187);
+	padding: 180px;
+}
+
+section.banner-img-sobre{
+	background-image: url('../imagens/wlp-sobre.jpeg');
+	background-position: bottom;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+
+.b-preto{
+	background-color:rgba(0,0,0,0.7);
+	width: 100%;
+	z-index: 999;
+	padding: 125px;
+}
+
+section.passo-a-passo{
+	width: 100%;
+	padding-top: 50px;
+}
+
+.circle-group{
+	margin: 45px 0;
+	border-bottom: 1px solid black;
+	padding-bottom: 50px;
+}
+
+section.pagina-login{
+	background-image: url('../imagens/wlp-login.jpeg');
+	background-size: cover;
+	background-position: center;
+	z-index: 1;
+}
+
+.form{
+	background-color: rgba(0,0,0,0.7);
+	z-index: 999;
+	width: 100%;
+	padding: 90px;
+}
+
+.pagina-login form{
+	margin: 0 auto;
+	text-align: center;
+	max-width: 400px;
+}
+
+form p{
+	margin-top: 35px;
+}

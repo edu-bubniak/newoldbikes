@@ -1,0 +1,16 @@
+{
+    "name": "edub/oldbikes",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Eduardo Bubniak",
+            "email": "edu.bubniak@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Oldbikes\\Loja\\" : "src/" 
+        }
+    }
+}

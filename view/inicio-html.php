@@ -36,11 +36,19 @@
 			        <a class="nav-link" href="#">Contato <span class="sr-only"></span></a>
 			      </li>
 			    </ul>
-			    <a href="/oldbikes-login"><button class="btn btn-outline-danger my-2 my-sm-0 button-login" type="submit">Faça Login</button></a>
+				
 			    <form class="form-inline my-2 my-lg-0">
-			      <input style="background-color: #e8f5ff;" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-			      <button class="btn btn-success my-2 my-sm-0" type="submit" style="color: black;">Buscar<img src="../icons/search.svg" class="search"></button>
+			      <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Buscar <img src="../icons/search.svg" class="search"></button>
 			    </form>
+
+				<?php
+					if(!isset($_SESSION['logado'])) {
+						echo "<a href='/oldbikes-login'><button class='btn btn-outline-danger my-2 my-sm-0 button-login logout' type='submit'>Faça Login</button></a>";
+					} else {
+						echo "<a href='/oldbikes-gerar-anuncio'><button class='btn btn-danger my-2 my-sm-0 text-white logout' type='submit'>Criar anuncio</button></a>";
+						echo "<a href='/logout'><button class='btn btn-danger my-2 my-sm-0 text-white logout' type='submit'>Sair</button></a>";
+					}
+				?>
 
 		 	</div>
 

@@ -1,7 +1,6 @@
 <?php 
 
 namespace Oldbikes\Loja\Controller;
-
 use Oldbikes\Loja\Controller\ControlaRequisicao;
 
 class LoginPagina implements ControlaRequisicao

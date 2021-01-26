@@ -13,37 +13,39 @@
 </div>
 </section>
 <section class="passo-a-passo">
-    <div class="container">
-        <div class="row text-center text-md-left">
-
-        <img class="img-fluid col-sm" style="max-width:600px;border: 3px solid white;" alt="Responsive image" src="../imagens/pecas-antigas.jpeg"/>
-        <div class="col-sm text-center">
-                <h1 style="width: 70px; height: 55px; background-color:#ffcc00; border-radius:30px; margin-top:70px;">1</h1>
-                <div class="circle-group">
-                    <h2 class="text-left">Procuramos e selecionamos peças originais de ótima qualidade com nossos fornecedores</h2>
+    <div class="passo1 text-dark">
+        <div class="container">
+            <div class="row">
+                <div class="exemplo text-left"><img src=""></div>
+                <div class="col-sm exemplo-texto text-left">
+                    <h1>Lorem Ipsum<h1>
+                    <h5><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mollis id erat at feugiat.
+                        Suspendisse pretium dolor nec felis ultrices semper. Morbi eget rutrum nisl. 
+                        Pellentesque vitae nisl sem. Pellentesque augue orci, sagittis ut nisl quis, aliquam aliquam dui.</b></h5>
                 </div>
+            </div>
         </div>
+    </div><!--passo1-->
 
-        <img src="../imagens/spray.jpeg" style="max-width:600px;border: 3px solid white;" class="img-fluid col-sm" alt="Responsive image">
-        <div class="col-sm text-center">
-                <h1 style="width: 70px; height: 55px; background-color:#ffcc00; border-radius:30px; margin-top:70px;">2</h1>
-                <div class="circle-group">
-                    <h2 class="text-left">Pintamos e restauramos as peças deixando-as em ótimo estado</h2>
+    <div class="passo2">
+        <div class="container">
+            
+        </div>
+    </div><!--passo2-->
+
+    <div class="passo3">
+        <div class="container">
+        <div class="row text-white">
+                <div class="col-sm exemplo-texto text-left">
+                    <h1>Lorem Ipsum<h1>
+                    <h5><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mollis<br> id erat at feugiat.
+                        Suspendisse pretium dolor nec felis ultrices semper.<br> Morbi eget rutrum nisl. 
+                        Pellentesque vitae nisl sem. Pellentesque<br> augue orci, sagittis ut nisl quis, aliquam aliquam dui.</b></h5>
                 </div>
+                <div class="exemplo text-left"><img src=""></div>
+            </div>
         </div>
-
-
-        <img class="img-fluid col-sm" style="max-width:600px;border: 3px solid white;" alt="Responsive image" src="../imagens/bike-pronta.jpeg"/>
-        <div class="col-sm text-center">
-                <h1 style="width: 70px; height: 55px; background-color:#ffcc00; border-radius:30px; margin-top:70px;">3</h1>
-                <div class="circle-group">
-                    <h2 class="text-left">Por fim montamos as bicicletas completamente restauradas em uma combinação de peças originais</h2>
-                </div>
-        </div>
-
-        </div>
-        </div>
-    </div>
+    </div><!--passo3-->
 </section>
 </html>
 <?php require __DIR__ . '/../fim-html.php'; ?>

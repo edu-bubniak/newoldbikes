@@ -9,10 +9,16 @@ class EntityManagerCreator
 {
     public function getEntityManager(): EntityManager
     {
-        $caminhoBanco = __DIR__ . '/../../banco.sql';
-        $pdo = new PDO('mysql:' . $caminhoBanco);
+        try {
+            $caminhoBanco = __DIR__ . '/../../banco.sql';
+            $pdo = new \PDO('mysql:host=localhost;dbname=oldbikes','root','1234');
 
-        return new EntityManager($pdo);        
+            return new EntityManager($pdo); 
+                
+        } catch(PDOException $e) {
+            echo 'ERRO: '.$e->getMessage();
+            exit();
+        }   
     }
 
 }

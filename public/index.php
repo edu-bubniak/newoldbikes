@@ -12,8 +12,16 @@ if(!array_key_exists($caminho, $rotas)) {
     exit();
 } 
 
+session_start();
+
+$acessivel = stripos($caminho, 'oldbikes');
+if(!isset($_SESSION['usuario_logado']) && $caminho !== '/logout' && $caminho !== '/realiza-login' && $caminho !== '/realiza-cadastro' && $acessivel === FALSE) {
+    header('Location: /oldbikes-home');
+    exit();
+}
+
+
 $classeControladora = $rotas[$caminho];
-/** @var ControlaRequisicao $controlador */
 $controlador = new $classeControladora;
 $controlador->processaRequisicao();
 

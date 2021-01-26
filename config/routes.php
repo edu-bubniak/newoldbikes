@@ -7,7 +7,13 @@ use Oldbikes\Loja\Controller\{
     Loja,
     Sobre,
     LoginPagina,
-    CadastroPagina
+    LoginController,
+    CadastroPagina,
+    CadastroController,
+    Deslogar,
+    SlideCompra,
+    GerarAnuncioPagina,
+    GerarAnuncioController
 };
 
 $rotas = [
@@ -15,7 +21,13 @@ $rotas = [
     '/oldbikes-loja' => Loja::class,
     '/oldbikes-sobre' => Sobre::class,
     '/oldbikes-login' => LoginPagina::class,
-    '/oldbikes-cadastro' => CadastroPagina::class
+    '/oldbikes-cadastro' => CadastroPagina::class,
+    '/realiza-login' => LoginController::class,
+    '/realiza-cadastro' => CadastroController::class,
+    "/logout" => Deslogar::class,
+    '/oldbikes-compra' => SlideCompra::class,
+    '/oldbikes-gerar-anuncio' => GerarAnuncioPagina::class,
+    '/oldbikes-upload' => GerarAnuncioController::class
 ];
 
 return $rotas;

@@ -13,7 +13,7 @@ use Oldbikes\Loja\Controller\{
     Deslogar,
     SlideCompra,
     GerarAnuncioPagina,
-    GerarAnuncioController
+    GerarAnuncioController,
 };
 
 $rotas = [
@@ -27,7 +27,9 @@ $rotas = [
     "/logout" => Deslogar::class,
     '/oldbikes-compra' => SlideCompra::class,
     '/oldbikes-gerar-anuncio' => GerarAnuncioPagina::class,
-    '/oldbikes-upload' => GerarAnuncioController::class
+    '/oldbikes-upload' => GerarAnuncioController::class,
+    '/oldbikes-sobre' => Sobre::class 
+
 ];
 
 return $rotas;

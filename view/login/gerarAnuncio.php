@@ -24,7 +24,7 @@ require __DIR__ . '/../inicio-html.php';
                 </div>
                 <div class="form-group text-left">
                     <label for="preco">Preço:</label>
-                    <input require type="text" name="preco" class="form-control" id="preco" placeholder="Preço">
+                    <input require type="text" name="preco" class="form-control" id="preco" placeholder="Ex: 1.000,00">
                 </div>
                 Foto1: <input type="file" name="data1">
                 Foto2: <input type="file" name="data2">

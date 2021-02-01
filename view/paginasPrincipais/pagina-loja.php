@@ -15,7 +15,7 @@ require __DIR__ . '/../inicio-html.php';
 					</div><!--barra-preco-->
 					<div class="valor-pesquisa">
 						<p>R$0,00</p>
-						<p>R$70.000,00</p>
+						<p>R$7.000,00</p>
 						<div class="clear"></div>
 					</div><!--valor-pesquisa-->
 				</div><!--search1-->
@@ -59,12 +59,15 @@ require __DIR__ . '/../inicio-html.php';
 		<div class="row">
 		
         <?php foreach ($anuncios as $anuncio): ?>
+		<?php
+			$foto = $anuncio->getFoto1();	
+		?>
 			<html>
 			<div class="col-lg-3">
 				<div class="card" style="width: 18rem;">
-						<img class="card-img-top" src="../imagens/foto1.jpeg" alt="Imagem de capa do card">
+						<img class="card-img-top" src="data:image/jpg;base64,<?= base64_encode($foto)?>" alt="Imagem de capa do card">
 						<div class="card-body">
-							<h5 class="card-title"><?= $anuncio->getPreco();?></h5>
+							<h5 class="card-title">R$<?= $anuncio->getPreco();?></h5>
 							<p class="card-text"><?= $anuncio->getTitulo();?><br /><?= $anuncio->getDescricao();?></p>
 							<a href="/oldbikes-compra?id=<?= $anuncio->getId();?>" class="btn btn-danger">Comprar</a>
 							

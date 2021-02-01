@@ -22,31 +22,6 @@ class GerarAnuncioController implements ControlaRequisicao
     {
         if(isset($_POST['btn'])){
 
-            /*$data = file_get_contents($_FILES['data']['tmp_name']);*/
-            $data1 = file_get_contents($_FILES['data1']['tmp_name']);
-
-            if (is_null($data1) || $data1 === false || strlen($data1) == 0) {
-                $this->defineMensagem('danger','Imagem inválida');
-                header('Location: /oldbikes-gerar-anuncio');
-                return;            
-            }
-
-            $data2 = file_get_contents($_FILES['data2']['tmp_name']);
-
-            if (is_null($data2) || $data2 === false || strlen($data2) == 0) {
-                $this->defineMensagem('danger','Imagem inválida');
-                header('Location: /oldbikes-gerar-anuncio');
-                return;            
-            }
-
-            $data3 = file_get_contents($_FILES['data3']['tmp_name']);
-
-            if (is_null($data3) || $data3 === false || strlen($data3) == 0) {
-                $this->defineMensagem('danger','Imagem inválida');
-                header('Location: /oldbikes-gerar-anuncio');
-                return;            
-            }
-
             $titulo = filter_input(
                 INPUT_POST,
                 'titulo',
@@ -77,11 +52,37 @@ class GerarAnuncioController implements ControlaRequisicao
                 FILTER_SANITIZE_STRING
             );
 
-            if (is_null($preco) || $preco === false || strlen($preco) == 0) {
+            if (is_null($preco) || $preco === false || strlen($preco) == 0 || !$this->repositorioDeAnuncios->precoValido($preco)) {
                 $this->defineMensagem('danger','Preço inválido');
                 header('Location: /oldbikes-gerar-anuncio');
                 return;            
             }
+
+            /*$data = file_get_contents($_FILES['data']['tmp_name']);*/
+            $data1 = file_get_contents($_FILES['data1']['tmp_name']);
+
+            if (is_null($data1) || $data1 === false || strlen($data1) == 0) {
+                $this->defineMensagem('danger','Imagem inválida');
+                header('Location: /oldbikes-gerar-anuncio');
+                return;            
+            }
+
+            $data2 = file_get_contents($_FILES['data2']['tmp_name']);
+
+            if (is_null($data2) || $data2 === false || strlen($data2) == 0) {
+                $this->defineMensagem('danger','Imagem inválida');
+                header('Location: /oldbikes-gerar-anuncio');
+                return;            
+            }
+
+            $data3 = file_get_contents($_FILES['data3']['tmp_name']);
+
+            if (is_null($data3) || $data3 === false || strlen($data3) == 0) {
+                $this->defineMensagem('danger','Imagem inválida');
+                header('Location: /oldbikes-gerar-anuncio');
+                return;            
+            }
+            
             $anuncioMontado = $this->repositorioDeAnuncios
                 ->montarAnuncio($titulo,$descricao,$preco,$data1,$data2,$data3);
             $insertAnuncio = $this->repositorioDeAnuncios
@@ -89,11 +90,11 @@ class GerarAnuncioController implements ControlaRequisicao
 
             
             if (is_null($insertAnuncio) === false) {
-                header('Location: /oldbikes-cadastro');
+                header('Location: /oldbikes-gerar-anuncio');
                 return;
             }
 
-            echo 'Título, descrição e preço estabelecidos';
+            header('Location: /oldbikes-loja');
         }
 
     }

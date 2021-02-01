@@ -126,6 +126,12 @@ class EntityManager
         return $anuncio;
     }
 
+    public function precoValido($preco)
+    {
+        $regex_preco = "/^[0-9]{1,3}([.][0-9]{3})*[,][0-9]{2}$/";
+        return preg_match($regex_preco, $preco);
+    }
+
     public function insertAnuncio($anuncio)
     {
             $titulo = $anuncio['titulo'];
@@ -134,8 +140,6 @@ class EntityManager
             $data1 = $anuncio['foto1'];
             $data2 = $anuncio['foto2'];
             $data3 = $anuncio['foto3'];
-
-
 
         
         $sqlInsertAnuncio = "INSERT INTO anuncio (titulo,descricao,preco,foto1,foto2,foto3) VALUES (:titulo,:descricao,:preco,:data1,:data2,:data3)";
@@ -148,15 +152,7 @@ class EntityManager
         $this->statement->bindParam(':data2', $data2, \PDO::PARAM_LOB);
         $this->statement->bindParam(':data3', $data3, \PDO::PARAM_LOB);
 
-        if($this->statement->execute() === false){
-            echo "\nPDO::errorInfo():\n";
-            print_r($this->statement->errorInfo());
-            exit;
-        } else {
-            echo 'foi';
-            exit;
-        }
-
+        $this->statement->execute();
     }
 
 

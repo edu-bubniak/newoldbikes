@@ -355,3 +355,21 @@ main .container {
 .descricao h1,h2,h3{
 	padding: 10px;
 }
+
+/*
+.anuncio-titulo{
+	width: 40%;
+}
+
+.anuncio-descricao{
+	width: 40%;
+}
+
+.api-correio{
+	margin-right: 30px;
+	width: 20%;
+}
+
+.api-correio input{
+	margin-top : 10px;
+}

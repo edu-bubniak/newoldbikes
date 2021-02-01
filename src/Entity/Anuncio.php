@@ -69,19 +69,37 @@ class Anuncio
         return $this->preco;
     }
 
+    /**Foto1 */
     public function setFoto1($foto1) : void
     {
         $this->foto1 = $foto1;
     }
 
+    public function getFoto1() : string 
+    {
+        return $this->foto1;
+    }
+
+    /**Foto2 */
     public function setFoto2($foto2) : void
     {
         $this->foto2 = $foto2;
     }
 
+    public function getFoto2() : string 
+    {
+        return $this->foto2;
+    }
+
+    /**Foto3 */
     public function setFoto3($foto3) : void
     {
         $this->foto3 = $foto3;
+    }
+
+    public function getFoto3() : string 
+    {
+        return $this->foto3;
     }
 
     public function __set($id, $valor)
